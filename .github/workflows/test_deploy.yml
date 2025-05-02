@@ -12,7 +12,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     - name: Setup Docker Compose
       run: docker-compose up -d
     - name: Run Tests
@@ -24,7 +24,7 @@ jobs:
     needs: Test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     - name: Connect and Exectue Commands
       uses: appleboy/ssh-action@master
       with:
