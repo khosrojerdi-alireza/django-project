@@ -23,7 +23,6 @@ class Command(BaseCommand):
         user.email = self.fake.email()
         user.save()
 
-
         for _ in range(5):
             task = Task.objects.create(
                 title=self.fake.text(max_nb_chars=25),
